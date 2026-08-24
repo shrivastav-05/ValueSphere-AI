@@ -1,1 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Customer Lifetime Value & Profitability</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+
+    <header class="header">
+      <div class="container">
+        <div class="brand">
+          <h1>Customer Intelligence</h1>
+
+          <p>Lifetime Value & Profitability Prediction</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="container">
+      <!-- HERO -->
+
+      <section class="hero">
+        <h2>Predict Customer Future Value</h2>
+
+        <p>
+          Enter the customer's historical behavior to estimate future 6-month
+          profit and generate a business recommendation.
+        </p>
+      </section>
+
+      <!-- PREDICTION FORM -->
+
+      <form action="/predict" method="POST" class="prediction-form">
+        <!-- CUSTOMER ACTIVITY -->
+
+        <div class="card">
+          <h3>Customer Activity</h3>
+
+          <div class="form-grid">
+            <div class="input-group">
+              <label> Past Orders </label>
+
+              <input
+                type="number"
+                name="past_orders"
+                placeholder="e.g. 15"
+                min="0"
+                step="any"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label> Past Quantity </label>
+
+              <input
+                type="number"
+                name="past_quantity"
+                placeholder="e.g. 30"
+                min="0"
+                step="any"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label> Recency (Days) </label>
+
+              <input
+                type="number"
+                name="past_recency_days"
+                placeholder="e.g. 20"
+                min="0"
+                step="any"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label> Customer Satisfaction </label>
+
+              <input
+                type="number"
+                name="past_avg_satisfaction"
+                placeholder="1 - 5"
+                min="1"
+                max="5"
+                step="0.01"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- FINANCIAL INFORMATION -->
+
+        <div class="card">
+          <h3>Financial Information</h3>
+
+          <div class="form-grid">
+            <div class="input-group">
+              <label> Past Revenue </label>
+
+              <input
+                type="number"
+                name="past_revenue"
+                placeholder="e.g. 80000"
+                min="0"
+                step="0.01"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label> Past Profit </label>
+
+              <input
+                type="number"
+                name="past_profit"
+                placeholder="e.g. 16000"
+                step="0.01"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label> Past Discount </label>
+
+              <input
+                type="number"
+                name="past_discount"
+                placeholder="e.g. 6000"
+                min="0"
+                step="0.01"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label> Average Order Value </label>
+
+              <input
+                type="number"
+                name="past_avg_order_value"
+                placeholder="e.g. 5333"
+                min="0"
+                step="0.01"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label> Profit Margin (%) </label>
+
+              <input
+                type="number"
+                name="past_profit_margin"
+                placeholder="e.g. 20"
+                step="0.01"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- COST & RETURNS -->
+
+        <div class="card">
+          <h3>Cost & Returns</h3>
+
+          <div class="form-grid">
+            <div class="input-group">
+              <label> Shipping Cost </label>
+
+              <input
+                type="number"
+                name="past_shipping_cost"
+                placeholder="e.g. 1800"
+                min="0"
+                step="0.01"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label> Marketing Cost </label>
+
+              <input
+                type="number"
+                name="past_marketing_cost"
+                placeholder="e.g. 900"
+                min="0"
+                step="0.01"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label> Return Cost </label>
+
+              <input
+                type="number"
+                name="past_return_cost"
+                placeholder="e.g. 500"
+                min="0"
+                step="0.01"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label> Number of Returns </label>
+
+              <input
+                type="number"
+                name="past_returns"
+                placeholder="e.g. 1"
+                min="0"
+                step="any"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label> Return Rate (%) </label>
+
+              <input
+                type="number"
+                name="past_return_rate"
+                placeholder="e.g. 6.67"
+                min="0"
+                step="0.01"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- BUTTONS -->
+
+        <div class="button-group">
+          <button type="submit" class="predict-btn">
+            Predict Customer Value
+          </button>
+
+          <button type="reset" class="reset-btn">Reset Form</button>
+        </div>
+      </form>
+
+      <!-- RESULTS -->
+
+      {% if prediction is defined %}
+
+      <section class="result-section">
+        <div class="result-header">
+          <h2>Customer Intelligence Result</h2>
+
+          <p>Based on the customer's historical behavior</p>
+        </div>
+
+        <div class="result-grid">
+          <div class="result-card">
+            <span> Predicted Future Profit </span>
+
+            <strong> ₹{{ "{:,.2f}".format(prediction) }} </strong>
+          </div>
+
+          <div class="result-card">
+            <span> Future Customer Value </span>
+
+            <strong> {{ future_value }} </strong>
+          </div>
+
+          <div class="result-card recommendation">
+            <span> Business Recommendation </span>
+
+            <strong> {{ recommendation }} </strong>
+          </div>
+        </div>
+      </section>
+
+      {% endif %}
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+      <p>Customer Lifetime Value & Profitability Prediction</p>
+
+      <p>Powered by Python, Flask & Random Forest</p>
+    </footer>
+  </body>
+</html>
