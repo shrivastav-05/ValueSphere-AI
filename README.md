@@ -33,64 +33,6 @@ This project converts historical transaction data into **customer-level profitab
 - Generate business recommendations
 - Build a reusable customer intelligence prediction system
 
-## Project Workflow
-
-```text
-Raw Transaction Data
-        ↓
-Data Cleaning & EDA
-        ↓
-Customer Feature Engineering
-        ↓
-RFM Analysis
-        ↓
-Customer Segmentation
-        ↓
-Profitability Analysis
-        ↓
-CLV Estimation
-        ↓
-Future Profit Target
-        ↓
-Random Forest Regression
-        ↓
-Model Validation
-        ↓
-Feature Importance
-        ↓
-Future Profit Prediction
-        ↓
-Future Value Classification
-        ↓
-Business Recommendation
-        ↓
-Final Customer Intelligence System
-```
-
-## Dataset
-
-The project uses transaction-level customer data containing information such as:
-
-- Customer ID
-- Order Date
-- Product Category
-- Quantity
-- Price
-- Discount
-- Revenue
-- Product Cost
-- Shipping Cost
-- Marketing Cost
-- Return Cost
-- Profit
-- Customer Age
-- Customer Gender
-- Region
-- Customer Tenure
-- Customer Satisfaction
-
-An improved customer-behavior dataset is also created so that historical customer behavior has a meaningful relationship with future profitability.
-
 ## Feature Engineering
 
 Customer-level features include:
@@ -173,13 +115,6 @@ past_profit_margin
 past_recency_days
 ```
 
-## Model Evaluation
-
-The model is evaluated using:
-
-- MAE (Mean Absolute Error)
-- RMSE (Root Mean Squared Error)
-- R² Score
 
 The initial model produced:
 
