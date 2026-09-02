@@ -330,25 +330,6 @@ Actionable Business Decisions
 * **Jupyter Notebook**
 * **Power BI** *(planned dashboard stage)*
 
----
-
-# Project Structure
-
-```text
-Customer_Lifetime_Value_Project/
-│
-├── Customer_Lifetime_Value.ipynb
-├── customer_lifetime_value_data.csv
-├── customer_lifetime_value_final.csv
-├── customer_lifetime_value_improved.csv
-├── customer_profit_final_model.pkl
-├── customer_profit_model_features.pkl
-├── future_profit_predictions.csv
-└── README.md
-```
-
----
-
 # How to Run
 
 ## 1. Install Dependencies
