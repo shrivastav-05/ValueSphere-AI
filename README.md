@@ -399,9 +399,10 @@ to answer a practical business question:
 
 > **Which customers are worth investing in, how much future profit can they generate, and what action should the business take?**
 
-## Author
-Shivam Shrivastav
+# Author
+
+**Shivam Shrivastav**
 
 BCA Student | Data Analytics & Machine Learning
 
-If you find this project useful, consider giving the repository a star.
+If you find this project useful, consider giving the repository a ⭐.
