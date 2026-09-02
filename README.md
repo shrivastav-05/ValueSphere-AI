@@ -47,7 +47,7 @@ The system helps answer:
 
 ---
 
-# Data Science Pipeline
+# Machine learning Workflow
 
 ```text
 Transaction-Level Data
