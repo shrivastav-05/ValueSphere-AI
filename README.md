@@ -46,6 +46,22 @@ The system helps answer:
 * Build a reusable customer intelligence pipeline
 
 ---
+---
+
+# Machine Learning Objective
+
+### Prediction Type
+
+**Regression**
+
+### Target
+
+```text
+Future 6-Month Customer Profit
+```
+
+The trained regression model estimates the future profit a customer is expected to generate over the next 6 months based on historical customer behavior, purchasing activity, and profitability-related features.
+---
 
 # Machine learning Workflow
 
