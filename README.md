@@ -1,3 +1,5 @@
+# ValueSphere-AI
+
 # Customer Lifetime Value & Profitability Prediction
 
 An end-to-end **Data Science and Machine Learning system** that analyzes customer purchasing behavior, measures historical profitability, estimates Customer Lifetime Value (CLV), predicts future customer profit, and converts predictions into actionable business decisions.
