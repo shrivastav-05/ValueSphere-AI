@@ -83,6 +83,20 @@ Business Recommendation
 ```
 ---
 
+# Application Screenshots
+
+## ValueSphere Dashboard
+
+![ValueSphere Dashboard](Screenshots/dashboard.png)
+
+## Customer Prediction
+
+![Customer Prediction](Screenshots/prediction.png)
+
+## Prediction Result
+
+![Prediction Result](Screenshots/result.png)
+
 # Machine Learning Objective
 
 ### Prediction Type
