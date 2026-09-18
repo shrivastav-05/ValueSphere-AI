@@ -96,6 +96,8 @@ Business Recommendation
 
 ![Prediction Result](Screenshots/result.png)
 
+---
+
 # Machine Learning Objective
 
 ### Prediction Type
