@@ -50,6 +50,39 @@ The system helps answer:
 ---
 ---
 
+# Flask Web Application
+
+ValueSphere is deployed as a **Flask-based web application** that converts the trained Machine Learning model into an interactive customer intelligence system.
+
+The web application allows users to enter customer-level information and receive:
+
+- Predicted future 6-month customer profit
+- Customer Lifetime Value insights
+- Future customer value segment
+- Profitability assessment
+- Business recommendation
+
+### Application Workflow
+
+```text
+Customer Information
+        ↓
+Flask Web Interface
+        ↓
+Input Validation
+        ↓
+Feature Preparation
+        ↓
+Trained ML Model
+        ↓
+Future Profit Prediction
+        ↓
+Customer Value Segmentation
+        ↓
+Business Recommendation
+```
+---
+
 # Machine Learning Objective
 
 ### Prediction Type
