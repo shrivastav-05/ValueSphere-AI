@@ -48,7 +48,6 @@ The system helps answer:
 * Build a reusable customer intelligence pipeline
 
 ---
----
 
 # Flask Web Application
 
