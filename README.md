@@ -86,15 +86,15 @@ Business Recommendation
 
 ## ValueSphere Dashboard
 
-![ValueSphere Dashboard](Screenshots/dashboard.png)
+![ValueSphere Dashboard](Screenshots/Dashboard.png)
 
 ## Customer Prediction
 
-![Customer Prediction](Screenshots/prediction.png)
+![Customer Prediction](Screenshots/CustomerPrediction.png)
 
 ## Prediction Result
 
-![Prediction Result](Screenshots/result.png)
+![Prediction Result](Screenshots/Predicationresult.png)
 
 ---
 
