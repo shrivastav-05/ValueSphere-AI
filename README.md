@@ -90,11 +90,11 @@ Business Recommendation
 
 ## Customer Prediction
 
-![Customer Prediction](Screenshots/CustomerPrediction.png)
+![Customer Prediction](Screenshots/customer-prediction.png)
 
 ## Prediction Result
 
-![Prediction Result](Screenshots/PredictionResult.png)
+![Prediction Result](Screenshots/prediction-result.png)
 
 ---
 
