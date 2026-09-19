@@ -94,7 +94,7 @@ Business Recommendation
 
 ## Prediction Result
 
-![Prediction Result](Screenshots/Predicationresult.png)
+![Prediction Result](Screenshots/PredicationResult.png)
 
 ---
 
